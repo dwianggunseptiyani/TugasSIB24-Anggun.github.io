@@ -1,0 +1,413 @@
+body{
+	background: url("img/bg.png");
+	font-size: 14px;
+	font-family: "Verdana", sans-serif;
+	margin:0;
+	padding: 0;
+	color: #d3cece;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+:root {
+  --modal-duration: 1s;
+  --primary-color: #30336b;
+  --secondary-color: #be2edd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+
+body.show-nav {
+  /* Width of nav */
+  transform: translateX(200px);
+}
+
+nav {
+  background-color: var(--primary-color);
+  border-right: 2px solid rgba(235, 233, 233, 0.801);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  z-index: 100;
+  transform: translateX(-100%);
+}
+
+nav .logo {
+  padding: 30px 0;
+  text-align: center;
+}
+
+nav .logo img {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+}
+
+nav ul li {
+  border-bottom: 2px solid rgba(224, 224, 224, 0.1);
+  padding: 20px;
+}
+
+nav ul li:first-of-type {
+  border-top: 2px solid rgba(238, 231, 231, 0.1);
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 130%;
+  position: relative;
+  padding: 40px 15px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin: 30px 0;
+}
+
+button,
+input[type='submit'] {
+  background-color: var(--secondary-color);
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.toggle {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.cta-btn {
+  padding: 12px 30px;
+  font-size: 20px;
+}
+
+.container {
+  padding: 15px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 800px;
+}
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal-container.show-modal {
+  display: block;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 400px;
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+
+.modal-header {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 15px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  border-bottom: 1px solid #ebe6e6;
+}
+
+.modal-content {
+  padding: 20px;
+}
+
+.modal-form div {
+  margin: 15px 0;
+}
+
+.modal-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.modal-form .form-input {
+  padding: 8px;
+  width: 100%;
+}
+
+.close-btn {
+  background: transparent;
+  font-size: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.container{
+	width: 800
+px;
+	margin: 0 auto;
+}
+
+#header{
+	margin-top:50px;
+	margin-bottom: 10px;
+}
+
+#header:after, #header:before{
+	display: table;
+	content: "";
+}
+
+#header:after{
+	clear: both;
+}
+
+#header img{
+	float: left;
+}
+
+#header h1{
+	color: #fff;
+	text-shadow: 1px 1px 0px #333, 2px 2px 0px #666;
+}
+
+#header p{
+	font-weight: 900;
+	color: #ddd;
+}
+
+.form-container{
+	background: #fbfbfb;
+	padding: 20px;
+	border: 1px solid #aaa;
+	position: relative;
+    box-shadow: 0 0 3px rgba(0,0,0,.2);
+    border-radius: 3px;
+    margin-bottom: 30px;
+}
+
+.form-container:after,
+.form-container:before {
+    background: #fbfbfb;
+    border: 1px solid #aaa;
+    bottom: -8px;
+    content: '';
+    height: 100%;
+    left: 4px;
+    position: absolute;
+    width: 100%;
+    z-index: -10;
+    box-shadow: 0 0 3px rgba(0,0,0,.2);
+    border-radius: 3px;
+}
+
+.form-container fieldset {
+    border-width: 2px; /* Sesuaikan dengan ketebalan border yang diinginkan */
+    width: calc(100% - 40px); /* Sesuaikan dengan lebar yang diinginkan (100% - 2 * padding) */
+    margin: 0 auto; /* Untuk membuat fieldset berada di tengah */
+    box-sizing: border-box; /* Membuat box model termasuk border dan padding */
+}
+
+
+fieldset{
+	border: 3px solid #bbb;
+    border-radius: 3px;
+    margin-bottom: 30px;
+}
+
+legend{
+	padding-right: 20px;
+    padding-left: 20px;
+    font-weight: 900;
+    color: #bbb;
+    /* text-shadow: 1px 1px 0 #fff; */
+    margin-bottom: 20px;
+}
+
+.form-grup{
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+
+.form-grup:after, .form-group:before{
+	display: table;
+	content: "";
+}
+
+.form-grup:after{
+	clear: both;
+}
+
+.label{
+	float: left;
+	width: 30%;
+	border: 0;
+	font-weight: 900;
+    color: #777;
+    font-size: 12px;
+}
+
+.label label{
+	display: inline-block;
+    vertical-align: -webkit-baseline-middle;
+}
+
+.input{
+	float: left;
+	width: 70%;
+	border: 0;
+}
+
+input[type=text], select, input[type=nohp], input[type=url], input[type=email], input[type=number], input[type=date], textarea{
+	border: 2px solid #bbb;
+    padding: 8px;
+    border-radius: 3px;
+    background: #fff;
+    width: 100%;
+    font-family: inherit;
+    background-color: #e9e3e3;
+    color: #999;
+}
+
+input[type=text]:focus, select:focus, input[type=nohp]:focus, input[type=url]:focus, input[type=email]:focus, input[type=number]:focus, input[type=date]:focus, textarea:focus{
+	border:2px solid #87bed8;
+}
+
+input[type="text"] {
+    width: 100px;
+}
+
+select{
+	width: inherit;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px; height: 15px;
+    border:3px solid #666;
+    border-radius: 50%;
+    background-color: #ebebeb;
+    outline: 0;
+}
+
+input[type="radio"]:checked {
+    background-color: #666;
+}
+
+input[type="checkbox"] {
+	margin-bottom: -2px;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px; height: 15px;
+    border:3px solid #999;
+    border-radius: 3px;
+    background-color: #999;
+    outline: 0;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #666;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.upload-foto{
+    border: 1px solid  #999;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+button[type=submit] {
+  background: #3498db;
+  border-radius: 15px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 8px 5px 10px 8px;
+  text-decoration: none;
+  float: right;
+}
+
+button[type=submit]:hover {
+  background: #3cb0fd;
+  text-decoration: none;
+}
+
+
+@media (max-width: 480px) {
+    .form-container fieldset {
+        width: calc(50% - 10px); /* Sesuaikan dengan lebar yang diinginkan pada layar kecil (80% - 2 * padding) */
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    .form-container fieldset {
+        width: calc(50% - 10px); /* Sesuaikan dengan lebar yang diinginkan pada layar sedang (80% - 2 * padding) */
+    }
+}

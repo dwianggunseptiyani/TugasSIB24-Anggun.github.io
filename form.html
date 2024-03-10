@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style-form.css">
+    <title>Tugas Studi Independent</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="header">
+        <img src="img/harapan.png">
+        <h1>Form Pendaftaran</h1>
+        <p>Silakan isi form secara lengkap</p>
+      </div>
+
+      <div class="form-container" style="margin: 100px auto; border-top-width: 10px; border-left-width: 10px; border-right-width: 10px; padding-top: 40px; width: 900px; height: 600px;">
+          <fieldset>
+          <legend>Informasi Primer</legend>
+          <div class="form-grup">
+            <div class="label">
+              <label>Nama Lengkap</label>
+            </div>
+            <div class="input">
+              <input type="text" name="nama" placeholder="nama lengkap " maxlength="20" autofocus style="width: 300px;height: 100px;">
+            </div>
+          </div>
+          <div class="form-grup">
+            <div class="label">
+              <label>Email</label>
+            </div>
+            <div class="input">
+              <input type="email" name="email" placeholder="Email aktif" maxlength="20" autocomplete="off">
+            </div>
+          </div>
+          <div class="form-grup">
+            <div class="label">
+              <label>No HP</label>
+            </div>
+            <div class="input">
+                <input type="nohp" name="nohp" placeholder="No HP aktif">
+            </div>
+          </div>
+          <div class="form-grup">
+            <div class="label">
+              <label>Hobi</label>
+            </div>
+            <div class="input">
+              <select name="hobi">
+                <option value="Membaca" selected>Membaca</option>
+                <option value="Menulis" selected>Menulis</option>
+                <option value="Menyanyi" selected>Menyanyi</option>
+                <option value="Olahraga" selected>Olahraga</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-grup">
+            <div class="label">
+              <label>Jenis Kelamin</label>
+            </div>
+            <div class="input">
+              <input type="radio" name="gender" value="1"> Laki-laki <br>
+              <input type="radio" name="gender" value="2"> Perempuan
+            </div>
+          </div>
+          <div class="form-grup">
+            <div class="label">
+              <label>Foto Anda</label>
+            </div>
+            <div class="input">
+              <label for="file-upload" class="upload-foto">
+                Upload Foto
+              </label>
+              <input id="file-upload" type="file" name="foto">
+            </div>
+          </div>
+          </fieldset>
+          <div class="form-grup">
+            <button type="submit"><img src="img/buttonsubmit.png"> KIRIM</button>
+          </div>
+
+  </body>
+</html>
