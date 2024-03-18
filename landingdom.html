@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style-form.css" />
+  <title>TugasSIBArkatama</title>
+  <style>
+    .carousel {
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      scroll-snap-type: y mandatory;
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+      height: 100vh;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .carousel-item {
+      scroll-snap-align: start;
+      padding: 20px;
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="img/harapan.png" alt="user" />
+    </div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Profil</a></li>
+      <li><a href="#">Kerja Praktek</a></li>
+      <li><a href="#">Tugas</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <button id="toggle" class="toggle">
+      <i class="fa fa-bars fa-2x"></i>
+    </button>
+  </header>
+
+  <div class="carousel" id="carousel">
+  </div>
+
+  <script>
+    window.onload = function() {
+        const carouselData = [
+    {
+      title: 'Halaman Utama',
+      content: 'Dwi Anggun Septiyani, Politeknik Harapan Bersama',
+      buttons: [
+        { text: 'Kembali', onclick: redirectToKembali }
+      ]
+    },
+    // Tambahkan slide lainnya di sini
+        {
+          title: 'Alamat Politeknik Harapan Bersama',
+          content: 'Jl. Mataram No.9, Pesurungan Lor, Kec. Margadana, Kota Tegal, Jawa Tengah 52147',
+          buttons: []
+        },
+        {
+          title: 'Program Studi',
+          content: `
+            <ul>
+              <li>Program Studi Sarjana Terapan Teknik Informatika</li>
+              <li>Program Studi Sarjana Terapan Akuntansi Sektor Publik</li>
+              <li>Program Studi D3 Teknik Elektro</li>
+              <li>Program Studi D3 Teknik Mesin</li>
+              <li>Program Studi D3 Teknik Komputer</li>
+              <li>Program Studi D3 Akuntansi</li>
+              <li>Program Studi D3 Kebidanan</li>
+              <li>Program Studi D3 Farmasi</li>
+              <li>Program Studi D3 Perhotelan</li>
+              <li>Program Studi D3 Desain Komunikasi Visual</li>
+              <li>Program Studi D3 Keperawatan</li>
+            </ul>
+          `,
+          buttons: []
+        }
+      ];
+
+      const carousel = document.getElementById('carousel');
+
+      carouselData.forEach(item => {
+        const carouselItem = document.createElement('div');
+        carouselItem.classList.add('carousel-item');
+        carouselItem.innerHTML = `
+          <header>
+            <h1>${item.title}</h1>
+            <p>${item.content}</p>
+            <div class="cta-buttons">
+              ${item.buttons.map(button => `<button class="cta-btn" onclick="${button.onclick}">${button.text}</button>`).join('')}
+            </div>
+          </header>
+        `;
+        carousel.appendChild(carouselItem);
+      });
+
+      window.addEventListener('resize', setCarouselItemWidth);
+      setCarouselItemWidth();
+    };
+
+    function redirectToKembali() {
+      window.location.href = 'index.html';
+    }
+
+    function setCarouselItemWidth() {
+      const carousel = document.getElementById('carousel');
+      const carouselItems = carousel.querySelectorAll('.carousel-item');
+      carouselItems.forEach(item => {
+        item.style.width = carousel.offsetWidth + 'px';
+      });
+    }
+  </script>
+</body>
+</html>

@@ -31,75 +31,95 @@
         <i class="fa fa-bars fa-2x"></i>
       </button>
 
-      <h1>Halaman Utama</h1>
+    <style>
+      .carousel {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+        width: 100%;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
 
-      <p>
-        Dwi Anggun Septiyani, Politeknik Harapan Bersama
-      </p>
+      .carousel::-webkit-scrollbar {
+        display: none;
+      }
 
-      <div class="cta-buttons">
-        <button class="cta-btn" id="open" onclick="redirectToJsDasar()">Input Nama</button>
-        <button class="cta-btn" id="open" onclick="redirectToPendaftaran()">Pendaftaran</button>
+    </style>
+  </head>
+  <body>
+    <div class="carousel">
+      <div class="carousel-item">
+        <header>
+          <h1>Halaman Utama</h1>
+          <p>Dwi Anggun Septiyani, Politeknik Harapan Bersama</p>
+          <div class="cta-buttons">
+            <button class="cta-btn" id="open" onclick="redirectToJsDasar()">Input Nama</button>
+            <button class="cta-btn" id="open" onclick="redirectTojsdom()">JSDOM</button>
+              <button class="cta-btn" id="open" onclick="redirectToPendaftaran()">Pendaftaran</button>
+          </div>
+      </header>
+        </div>
       </div>
-    </header>
-
-    <div class="container">
-      <h2>About Politeknik Harapan Bersama</h2>
-      <p>
-        Kota Tegal terkenal dengan Jepangnya Indonesia, kota yang dinamis dan metropolis membuat masyarakat luas kagum dengan hasil 
-        karya produksi home industri yang banyak diciptakan oleh anak negeri ini, dengan ingin meningkatkan kwalitas dan hasil mutu 
-        produksi maka lahirlah pelopor pendidikan swasta yaitu pada tanggal 22 september Yayasan Pendidikan "HARAPAN BERSAMA" 
-        dengan akte Notaris No. 26-05/BH/yy/2002/ PBH PN. Kemudian dalam rangka mewujudkan visi dan misinya pada tanggal 12 
-        Desember 2001 timbul gagasan untuk merintis pendirian POLITEKNIK di Kota Tegal dengan dikeluarkan Rekomendasi Walikota Tegal 
-        No. 421.4/00024.  Selanjutnya dengan surat Rekomendasi tersebut dijadikan dasar motivasi untuk membangun Perguruan Tinggi yang 
-        diberi nama dengan POLITEKNIK “HARAPAN BERSAMA” Kota Tegal.Politeknik Harapan Bersama Tegal didirikan tahun 2002 berdasarkan 
-        SK. Mendiknas RI Nomor : 128/D/O/2002 yang berkedudukan di kota Tegal.
-      </p>
-      <p>
-        Pada awal berdirinya Politeknik memiliki empat Program Studi yaitu Teknik Mesin, Teknik Elektro, Teknik Komputer & Akuntansi. 
-        Sejalan dengan pesatnya pembangunan nasional dan perkembangan industri dan kesehatan maka ditahun 2004 Politeknik membuka 
-        Program Studi Kebidanan dan Farmasi. Dengan dibukanya Prgram Studi Kebidanan diharapkan Politeknik menjadi lebih maju dan 
-        lebih dikenal oleh masyarakat.
-      </p>
-
-      <h2>Address</h2>
-
-      <p>
-        Jl. Mataram No.9, Pesurungan Lor, Kec. Margadana, Kota Tegal, Jawa Tengah 52147
-      </p>
-
-      <h2>Program Studi</h2>
-      <ul>
-        <li>Program Studi Sarjana Terapan Teknik Informatika</li>
-        <li>Program Studi Sarjana Terapan Akuntansi Sektor Publik</li>
-        <li>Program Studi D3 Teknik Elektro</li>
-        <li>Program Studi D3 Teknik Mesin</li>
-        <li>Program Studi D3 Teknik Komputer</li>
-        <li>Program Studi D3 Akuntansi</li>
-        <li>Program Studi D3 Kebidanan</li>
-        <li>Program Studi D3 Farmasi</li>
-        <li>Program Studi D3 Perhotelan</li>
-        <li>Program Studi D3 Desain Komunikasi Visual</li>
-        <li>Program Studi D3 Keperawatan</li>
+      <div class="carousel-item">
+        <h1>About Politeknik Harapan Bersama</h1>
+        <p>Kota Tegal terkenal dengan Jepangnya Indonesia, kota yang dinamis dan metropolis membuat masyarakat luas
+          kagum dengan hasil karya produksi home industri yang banyak diciptakan oleh anak negeri ini, dengan ingin
+          meningkatkan kwalitas dan hasil mutu produksi maka lahirlah pelopor pendidikan swasta yaitu pada tanggal
+          22 september Yayasan Pendidikan "HARAPAN BERSAMA" dengan akte Notaris No.
+          26-05/BH/yy/2002/ PBH PN. Kemudian dalam rangka mewujudkan visi dan misinya pada tanggal 12 Desember
+          2001 timbul gagasan untuk merintis pendirian POLITEKNIK di Kota Tegal dengan dikeluarkan Rekomendasi
+          Walikota Tegal No. 421.4/00024. Selanjutnya dengan surat Rekomendasi tersebut dijadikan dasar motivasi
+          untuk membangun Perguruan Tinggi yang diberi nama dengan POLITEKNIK “HARAPAN BERSAMA” Kota Tegal.Politeknik
+          Harapan Bersama Tegal didirikan tahun 2002 berdasarkan SK. Mendiknas RI Nomor : 128/D/O/2002 yang
+          berkedudukan di kota Tegal</p>
+      </div>
+      <div class="carousel-item">
+        <h1>Program Studi</h1>
+        <ul>
+          <li>Program Studi Sarjana Terapan Teknik Informatika</li>
+          <li>Program Studi Sarjana Terapan Akuntansi Sektor Publik</li>
+          <li>Program Studi D3 Teknik Elektro</li>
+          <li>Program Studi D3 Teknik Mesin</li>
+          <li>Program Studi D3 Teknik Komputer</li>
+          <li>Program Studi D3 Akuntansi</li>
+          <li>Program Studi D3 Kebidanan</li>
+          <li>Program Studi D3 Farmasi</li>
+          <li>Program Studi D3 Perhotelan</li>
+          <li>Program Studi D3 Desain Komunikasi Visual</li>
+          <li>Program Studi D3 Keperawatan</li>
       </ul>
-
-      <p>
-        Program Pendidikan yang ada di Politeknik Harapan Bersama dirancang secara khusus untuk menghasilkan tenaga ahli yang mandiri 
-        dan profesional pada tingkat jenjang Diploma-3 dengan sistem pendidikan vocasional (70% Praktek dan 30% Teori), sehingga lulusan 
-        dapat diserap oleh pasar kerja dan dapat menciptakan lapangan kerja bagi dirinya sendiri maupun orang lain.
-      </p>
+      </div>
     </div>
+
     <script src="script.js"></script>
-    <script>
-      function redirectToJsDasar() {
-        window.location.href = 'jsdasar.html';
-      }
+   <script>
+   function redirectToJsDasar() {
+      // Mengarahkan ke halaman input nama
+      window.location.href = 'jsdasar.html';
+    }
 
-      function redirectToPendaftaran() {
-        // Ganti URL sesuai dengan halaman pendaftaran
-        window.location.href = 'form.html';
-      }
-    </script>
+    function redirectToPendaftaran() {
+      // Mengarahkan ke halaman pendaftaran
+      window.location.href = "form.html";
+    }
+    function redirectTojsdom() {
+      // Mengarahkan ke halaman pendaftaran
+      window.location.href = "landingdom.html";
+    }
 
-  </body>
+    function setCarouselItemWidth() {
+      const carousel = document.querySelector('.carousel');
+      const carouselItems = document.querySelectorAll('.carousel-item');
+      carouselItems.forEach(item => {
+        item.style.width = carousel.offsetWidth + 'px';
+      });
+    }
+
+    window.addEventListener('resize', setCarouselItemWidth);
+    setCarouselItemWidth();
+  </script>
+</body>
 </html>
