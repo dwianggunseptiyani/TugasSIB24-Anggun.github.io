@@ -23,6 +23,8 @@
         <li><a href="#">Profil</a></li>
         <li><a href="#">Kerja Praktek</a></li>
         <li><a href="#">Tugas</a></li>
+        <li><a href="login-responsive.html">Login</a></li>
+      <li><a href="product-responsive.html">Product</a></li>
       </ul>
     </nav>
 
@@ -56,13 +58,16 @@
           <h1>Halaman Utama</h1>
           <p>Dwi Anggun Septiyani, Politeknik Harapan Bersama</p>
           <div class="cta-buttons">
-            <button class="cta-btn" id="open" onclick="redirectToJsDasar()">Input Nama</button>
-            <button class="cta-btn" id="open" onclick="redirectToJsDom()">JSDOM</button>
-            <button class="cta-btn" id="open" onclick="redirectToPendaftaran()">Pendaftaran</button>
-            <button class="cta-btn" id="open" onclick="redirectToArray()">Array</button>
-            <button class="cta-btn" id="open" onclick="redirectToAPI()">API</button>
+            <button class="cta-btn" onclick="redirectToJsDasar()">Input Nama</button>
+            <button class="cta-btn" onclick="redirectToJsDom()">JSDOM</button>
+            <button class="cta-btn" onclick="redirectToPendaftaran()">Pendaftaran</button>
+            <button class="cta-btn" onclick="redirectToArray()">Array</button>
+            <button class="cta-btn" onclick="redirectToAPI()">API</button>
+            <button class="cta-btn" onclick="redirectToLogin()">Login</button>
+            <button class="cta-btn" onclick="redirectToProduct()">Product</button>
           </div>
-        </header>
+      </header>
+        </div>
       </div>
       <div class="carousel-item">
         <h1>About Politeknik Harapan Bersama</h1>
@@ -91,33 +96,32 @@
           <li>Program Studi D3 Perhotelan</li>
           <li>Program Studi D3 Desain Komunikasi Visual</li>
           <li>Program Studi D3 Keperawatan</li>
-        </ul>
+      </ul>
       </div>
     </div>
 
     <script src="script.js"></script>
    <script>
    function redirectToJsDasar() {
-      // Mengarahkan ke halaman input nama
       window.location.href = 'jsdasar.html';
     }
-
     function redirectToPendaftaran() {
-      // Mengarahkan ke halaman pendaftaran
       window.location.href = "form.html";
     }
     function redirectToJsDom() {
-      // Mengarahkan ke halaman pendaftaran
       window.location.href = "landingdom.html";
     }
-
     function redirectToArray() {
-      // Mengarahkan ke halaman pendaftaran
       window.location.href = "producarray.html";
     }
     function redirectToAPI() {
-      // Mengarahkan ke halaman pendaftaran
       window.location.href = "producapi.html";
+    }
+    function redirectToLogin() {
+      window.location.href = "login-responsive.html";
+    }
+    function redirectToProduct() {
+      window.location.href = "product-responsive.html";
     }
 
     function setCarouselItemWidth() {
